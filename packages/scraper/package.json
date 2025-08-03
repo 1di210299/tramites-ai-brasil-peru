@@ -1,0 +1,29 @@
+{
+  "name": "@tramites-ai/scraper",
+  "version": "1.0.0",
+  "description": "Scraper para obtener información de trámites desde gob.pe",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "scrape": "tsx src/scrapers/tupa-scraper.ts",
+    "cron": "tsx src/cron.ts"
+  },
+  "dependencies": {
+    "puppeteer": "^21.6.1",
+    "cheerio": "^1.0.0-rc.12",
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1",
+    "node-cron": "^3.0.3",
+    "winston": "^3.11.0",
+    "@prisma/client": "^5.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "@types/cheerio": "^0.22.35",
+    "@types/node-cron": "^3.0.11",
+    "tsx": "^4.6.2",
+    "typescript": "^5.3.3"
+  }
+}
