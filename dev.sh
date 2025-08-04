@@ -75,16 +75,22 @@ function run_scraping() {
     activate_venv
     
     print_status "Ejecutando análisis de scraping..."
-    cd packages/scraper/src
+    cd "$PROJECT_DIR"
     
-    echo "1. Analizando PDFs..."
-    python simple_pdf_analyzer.py
-    
-    echo -e "\n2. Procesando enlaces..."
-    python simple_links_processor.py
-    
-    echo -e "\n3. Generando reporte comprensivo..."
-    python comprehensive_report.py
+    echo "📊 Ejecutando análisis de PDFs..."
+    python packages/scraper/src/simple_pdf_analyzer.py
+
+    echo ""
+    echo "🔗 Ejecutando análisis de enlaces..."
+    python packages/scraper/src/simple_links_processor.py
+
+    echo ""
+    echo "📊 Ejecutando análisis de archivos Excel..."
+    python packages/scraper/src/excel_processor.py
+
+    echo ""
+    echo "📋 Generando reporte comprensivo..."
+    python packages/scraper/src/comprehensive_report.py
     
     print_success "Análisis completado. Revisa los archivos generados:"
     ls -la *.csv *.json

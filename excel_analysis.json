@@ -1,0 +1,193 @@
+{
+  "analysis_date": "2025-08-03T21:39:25.596305",
+  "summary": {
+    "total_files": 2,
+    "total_sheets": 2,
+    "total_rows": 516,
+    "total_procedures": 6,
+    "total_locations": 33
+  },
+  "files": [
+    {
+      "file_name": "1736727-centros-descentralizados-al-30-de-junio-2025.xlsx",
+      "sheets": [
+        {
+          "name": "DESCENTRALIZADOS MAYO",
+          "rows": 33,
+          "columns": 14,
+          "column_names": [
+            "Unnamed: 0",
+            "Unnamed: 1",
+            "Unnamed: 2",
+            "Unnamed: 3",
+            "Unnamed: 4",
+            "Unnamed: 5",
+            "Unnamed: 6",
+            "Unnamed: 7",
+            "Unnamed: 8",
+            "Unnamed: 9",
+            "Unnamed: 10",
+            "Unnamed: 11",
+            "Unnamed: 12",
+            "Unnamed: 13"
+          ],
+          "procedures_in_sheet": [
+            "item jefatura regional departamento institucion centro de atención trámites dni entregas dni c",
+            "stitucion centro de atención trámites dni entregas dni certificaciones total t"
+          ],
+          "locations_in_sheet": [
+            "RÁMITES DNI ENTREGAS DNI CERTIFICA",
+            "PIURA PIURA",
+            "PIURA PIURA",
+            "PIURA PIURA",
+            "PIURA PIURA",
+            "TRUJILLO CAJAMARCA",
+            "TRUJILLO CAJAMARCA",
+            "TRUJILLO CAJAMARCA",
+            "TRUJILLO CAJAMARCA",
+            "DEPARTAMENTO INSTITUCION CENTRO DE ATENCIÓN"
+          ],
+          "contacts_in_sheet": []
+        }
+      ],
+      "total_rows": 33,
+      "procedures_found": [
+        "item jefatura regional departamento institucion centro de atención trámites dni entregas dni c",
+        "stitucion centro de atención trámites dni entregas dni certificaciones total t"
+      ],
+      "entities_mentioned": [],
+      "document_type": "CENTROS_ATENCION",
+      "locations_found": [
+        "RÁMITES DNI ENTREGAS DNI CERTIFICA",
+        "PIURA PIURA",
+        "PIURA PIURA",
+        "PIURA PIURA",
+        "PIURA PIURA",
+        "TRUJILLO CAJAMARCA",
+        "TRUJILLO CAJAMARCA",
+        "TRUJILLO CAJAMARCA",
+        "TRUJILLO CAJAMARCA",
+        "DEPARTAMENTO INSTITUCION CENTRO DE ATENCIÓN"
+      ],
+      "contact_info": []
+    },
+    {
+      "file_name": "1736727-relacion-de-centros-de-atencion-de-reniec-julio-2025.xlsx",
+      "sheets": [
+        {
+          "name": "DETALLE",
+          "rows": 483,
+          "columns": 25,
+          "column_names": [
+            "N°",
+            "CODIGO SIO DNI NUM",
+            "DEPARTAMENTO",
+            "PROVINCIA",
+            "DISTRITO",
+            "CENTRAL TELEFÓNICA",
+            "REPRESENTANTE",
+            "CORREO",
+            "OFICINAS REGIONALES/U.O.",
+            "TIPO DE LOCAL",
+            "SIGLA TIPO DE LOCAL",
+            "CENTRO DE ATENCIÓN",
+            "HORARIO DE ATENCIÓN AL PUBLICO",
+            "TIPO DE LA VIA",
+            "NOMBRE DE LA VIA",
+            "ESTADO\nOperativo: Atiente de lunes a viernes\nDeplazamiento: Atiende de acuerdo a la programación de RENIEC",
+            " ¿Este Centro de Atención toma fotografía? ",
+            " ¿Este Centro de Atención entrega DNI Electrónico? ",
+            " TRAMITE DE DNI MAYOR ",
+            " TRAMITE DE DNI MENOR ",
+            " ENTREGAS DE DNI ",
+            " INSCRIPCION DE REGISTROS CIVILES ",
+            " CERTIFICACION DE REGISTROS CIVILES ",
+            " CERTIFICACION DEL RUIPN ",
+            " EREP "
+          ],
+          "procedures_in_sheet": [
+            "tramite de dni mayor   tramite de dni menor   entregas de dni   inscripcion de registros civiles   certificacion de registros civiles   certific",
+            "de local centro de atención horario de atención al publico tipo de la via nom",
+            "este centro de atención toma fotografía",
+            "este centro de atención entrega dni electrónico"
+          ],
+          "locations_in_sheet": [
+            "VINCIA DISTRITO CENTRAL TELEFÓNICA",
+            "N DE REGISTROS CIVILES   CERTIFICA",
+            "N DE REGISTROS CIVILES   CERTIFICA",
+            "LAMBAYEQUE CHICLAYO CHICLAYO",
+            "LAMBAYEQUE CHICLAYO CHICLAYO",
+            "PIURA SULLANA SULLANA",
+            "LAMBAYEQUE CHICLAYO",
+            "LAMBAYEQUE CHICLAYO CHICLAYO",
+            "PIURA OFICINA REGISTRAL OR OR CHICLAYO",
+            "Jirón Ica",
+            "Calle Cacique Cinto N",
+            "Av. Elias Aguirre OPERATIVO SI SI SI SI SI SI SI SI SI",
+            "Calle Tres Marías N",
+            "Calle Libertad N",
+            "Calle Bolognesi N",
+            "Calle Leoncio Prado N",
+            "Calle Dos de Mayo N",
+            "Jr. Los Pescadores S",
+            "Av. Chulucanas  OPERATIVO SI SI NO SI SI SI NO NO NO 3",
+            "Calle Daniel alcides carrion S",
+            "DEPARTAMENTO PROVINCIA DISTRITO CENTRAL TEL",
+            "Distrito de San Luis S",
+            "Distrito de Constitución OPERATIVO NO N"
+          ],
+          "contacts_in_sheet": [
+            "Domingo Negrón Nº 399 OPERATIVO NO NO SI SI SI NO SI SI NO 7 179.0 LAMBAYEQUE CHICLAYO JOSE LEONARDO ORTIZ 01.- PIURA OFICINA REGISTRAL OR OR JOSÉ LEONARDO ORTIZ 08:45",
+            "DOMINGO OLAVEGOYA 08:45",
+            "Domingo N° 101 OPERATIVO SI SI SI SI SI NO SI SI SI 207 92.0 AREQUIPA CAYLLOMA CHIVAY 08.- AREQUIPA PUNTO DE ATENCION PERMANENTE PAP PAP CAYLLOMA 08:45",
+            "Domingo N° 101 OPERATIVO NO NO SI NO NO NO SI NO NO 231 60.0 CUSCO CUSCO SANTIAGO 09.- CUSCO OFICINA REGISTRAL AUXILIAR ORA ORA ANTONIO LORENA DEL CUSCO (MINSA) 08:45",
+            "Domingo Huarca Cruz S/N Barrio Túpac Amaru  - Hospital Espinar OPERATIVO SI NO NO SI SI SI NO NO NO 261 713.0 MADRE DE DIOS TAHUAMANU IBERIA 09.- CUSCO OFICINA REGISTRAL AUXILIAR ORA ORA SAN MARTIN DE PORRES DE IBERIA (MINSA) 08:45"
+          ]
+        }
+      ],
+      "total_rows": 483,
+      "procedures_found": [
+        "tramite de dni mayor   tramite de dni menor   entregas de dni   inscripcion de registros civiles   certificacion de registros civiles   certific",
+        "de local centro de atención horario de atención al publico tipo de la via nom",
+        "este centro de atención toma fotografía",
+        "este centro de atención entrega dni electrónico"
+      ],
+      "entities_mentioned": [
+        "RENIEC"
+      ],
+      "document_type": "CENTROS_ATENCION",
+      "locations_found": [
+        "VINCIA DISTRITO CENTRAL TELEFÓNICA",
+        "N DE REGISTROS CIVILES   CERTIFICA",
+        "N DE REGISTROS CIVILES   CERTIFICA",
+        "LAMBAYEQUE CHICLAYO CHICLAYO",
+        "LAMBAYEQUE CHICLAYO CHICLAYO",
+        "PIURA SULLANA SULLANA",
+        "LAMBAYEQUE CHICLAYO",
+        "LAMBAYEQUE CHICLAYO CHICLAYO",
+        "PIURA OFICINA REGISTRAL OR OR CHICLAYO",
+        "Jirón Ica",
+        "Calle Cacique Cinto N",
+        "Av. Elias Aguirre OPERATIVO SI SI SI SI SI SI SI SI SI",
+        "Calle Tres Marías N",
+        "Calle Libertad N",
+        "Calle Bolognesi N",
+        "Calle Leoncio Prado N",
+        "Calle Dos de Mayo N",
+        "Jr. Los Pescadores S",
+        "Av. Chulucanas  OPERATIVO SI SI NO SI SI SI NO NO NO 3",
+        "Calle Daniel alcides carrion S",
+        "DEPARTAMENTO PROVINCIA DISTRITO CENTRAL TEL",
+        "Distrito de San Luis S",
+        "Distrito de Constitución OPERATIVO NO N"
+      ],
+      "contact_info": [
+        "Domingo Negrón Nº 399 OPERATIVO NO NO SI SI SI NO SI SI NO 7 179.0 LAMBAYEQUE CHICLAYO JOSE LEONARDO ORTIZ 01.- PIURA OFICINA REGISTRAL OR OR JOSÉ LEONARDO ORTIZ 08:45",
+        "DOMINGO OLAVEGOYA 08:45",
+        "Domingo N° 101 OPERATIVO SI SI SI SI SI NO SI SI SI 207 92.0 AREQUIPA CAYLLOMA CHIVAY 08.- AREQUIPA PUNTO DE ATENCION PERMANENTE PAP PAP CAYLLOMA 08:45",
+        "Domingo N° 101 OPERATIVO NO NO SI NO NO NO SI NO NO 231 60.0 CUSCO CUSCO SANTIAGO 09.- CUSCO OFICINA REGISTRAL AUXILIAR ORA ORA ANTONIO LORENA DEL CUSCO (MINSA) 08:45",
+        "Domingo Huarca Cruz S/N Barrio Túpac Amaru  - Hospital Espinar OPERATIVO SI NO NO SI SI SI NO NO NO 261 713.0 MADRE DE DIOS TAHUAMANU IBERIA 09.- CUSCO OFICINA REGISTRAL AUXILIAR ORA ORA SAN MARTIN DE PORRES DE IBERIA (MINSA) 08:45"
+      ]
+    }
+  ]
+}

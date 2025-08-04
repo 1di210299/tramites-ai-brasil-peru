@@ -9,13 +9,15 @@ from datetime import datetime
 from pathlib import Path
 
 def load_analysis_results():
-    """Cargar resultados de ambos análisis"""
+    """Cargar resultados de todos los análisis"""
     
     results = {
         'pdf_analysis': None,
         'links_analysis': None,
+        'excel_analysis': None,
         'pdf_file_exists': False,
-        'links_file_exists': False
+        'links_file_exists': False,
+        'excel_file_exists': False
     }
     
     # Cargar análisis de PDFs
@@ -32,10 +34,17 @@ def load_analysis_results():
             results['links_analysis'] = json.load(f)
             results['links_file_exists'] = True
     
+    # Cargar análisis de Excel
+    excel_file = Path('excel_analysis.json')
+    if excel_file.exists():
+        with open(excel_file, 'r', encoding='utf-8') as f:
+            results['excel_analysis'] = json.load(f)
+            results['excel_file_exists'] = True
+    
     return results
 
 def generate_comprehensive_report():
-    """Generar reporte comprensivo de ambas fuentes"""
+    """Generar reporte comprensivo de todas las fuentes"""
     
     print("📊 REPORTE COMPRENSIVO - TRAMITES AI")
     print("=" * 60)
@@ -43,7 +52,7 @@ def generate_comprehensive_report():
     # Cargar datos
     data = load_analysis_results()
     
-    if not data['pdf_file_exists'] and not data['links_file_exists']:
+    if not data['pdf_file_exists'] and not data['links_file_exists'] and not data['excel_file_exists']:
         print("❌ No se encontraron archivos de análisis")
         return
     
@@ -78,6 +87,20 @@ def generate_comprehensive_report():
         total_procedures += links_procedures
         sources_processed += links_count
     
+    # Excel
+    if data['excel_file_exists']:
+        excel_data = data['excel_analysis']
+        excel_procedures = excel_data['summary']['total_procedures']
+        excel_count = excel_data['summary']['total_files']
+        excel_rows = excel_data['summary']['total_rows']
+        
+        print(f"📊 Archivos Excel analizados: {excel_count}")
+        print(f"📊 Filas totales en Excel: {excel_rows}")
+        print(f"📋 Procedimientos desde Excel: {excel_procedures}")
+        
+        total_procedures += excel_procedures
+        sources_processed += excel_count
+    
     print(f"\n🎯 TOTALES CONSOLIDADOS:")
     print(f"   • Fuentes procesadas: {sources_processed}")
     print(f"   • Procedimientos identificados: {total_procedures}")
@@ -92,7 +115,7 @@ def generate_comprehensive_report():
     if data['pdf_file_exists']:
         pdf_entities = data['pdf_analysis']['summary']['entities_found']
         for entity in pdf_entities:
-            entity_stats[entity] = entity_stats.get(entity, {'pdfs': 0, 'links': 0, 'total': 0})
+            entity_stats[entity] = entity_stats.get(entity, {'pdfs': 0, 'links': 0, 'excel': 0, 'total': 0})
             entity_stats[entity]['pdfs'] = pdf_entities.count(entity)
             entity_stats[entity]['total'] += entity_stats[entity]['pdfs']
     
@@ -100,15 +123,24 @@ def generate_comprehensive_report():
     if data['links_file_exists']:
         links_entities = data['links_analysis']['summary']['by_entity']
         for entity, count in links_entities.items():
-            entity_stats[entity] = entity_stats.get(entity, {'pdfs': 0, 'links': 0, 'total': 0})
+            entity_stats[entity] = entity_stats.get(entity, {'pdfs': 0, 'links': 0, 'excel': 0, 'total': 0})
             entity_stats[entity]['links'] = count
             entity_stats[entity]['total'] += count
+    
+    # Entidades desde Excel
+    if data['excel_file_exists']:
+        for file_data in data['excel_analysis']['files']:
+            for entity in file_data.get('entities_mentioned', []):
+                entity_stats[entity] = entity_stats.get(entity, {'pdfs': 0, 'links': 0, 'excel': 0, 'total': 0})
+                entity_stats[entity]['excel'] += 1
+                entity_stats[entity]['total'] += 1
     
     # Mostrar estadísticas por entidad
     for entity, stats in sorted(entity_stats.items(), key=lambda x: x[1]['total'], reverse=True):
         print(f"   • {entity}:")
         print(f"     - PDFs: {stats['pdfs']}")
         print(f"     - Enlaces: {stats['links']}")
+        print(f"     - Excel: {stats['excel']}")
         print(f"     - Total: {stats['total']}")
     
     # Tipos de documentos
