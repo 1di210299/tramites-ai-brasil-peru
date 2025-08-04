@@ -1,0 +1,50 @@
+# Web scraping avanzado
+beautifulsoup4==4.12.2
+selenium==4.15.2
+undetected-chromedriver==3.5.4
+requests==2.31.0
+fake-useragent==1.4.0
+
+# Data processing
+pandas==2.1.3
+lxml==4.9.3
+numpy==1.25.2
+
+# Async HTTP y networking
+aiohttp==3.9.1
+aiofiles==23.2.0
+
+# Base de datos async
+asyncpg==0.29.0
+sqlalchemy[asyncio]==2.0.23
+psycopg2-binary==2.9.9
+
+# Utils y configuración
+python-dotenv==1.0.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# Logging y monitoreo
+loguru==0.7.2
+structlog==23.2.0
+
+# Procesamiento de texto
+nltk==3.8.1
+python-dateutil==2.8.2
+
+# Exportación de datos
+openpyxl==3.1.2
+xlsxwriter==3.1.9
+
+# Procesamiento de PDFs
+PyPDF2==3.0.1
+pdfplumber==0.10.3
+PyMuPDF==1.23.8
+
+# Utilidades de desarrollo
+rich==13.7.0
+click==8.1.7
+
+# Testing (opcional)
+pytest==7.4.3
+pytest-asyncio==0.21.1

@@ -1,0 +1,29 @@
+# Archivo de dependencias para el proyecto Trámites AI
+beautifulsoup4==4.13.4
+lxml==6.0.0
+requests==2.32.4
+aiohttp==3.12.15
+selenium==4.34.2
+PyPDF2==3.0.1
+pdfplumber==0.11.7
+PyMuPDF==1.26.3
+pandas==2.3.1
+openpyxl==3.1.5
+undetected-chromedriver==3.5.5
+websockets==15.0.1
+
+# Para el backend FastAPI
+fastapi==0.104.1
+uvicorn==0.24.0
+sqlalchemy==2.0.23
+asyncpg==0.29.0
+redis==5.0.1
+pydantic==2.5.0
+python-multipart==0.0.6
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+
+# Para desarrollo
+python-dotenv==1.0.0
+pytest==7.4.3
+pytest-asyncio==0.21.1

@@ -1,30 +1,49 @@
 {
   "name": "tramites-ai-peru",
   "version": "1.0.0",
-  "description": "Asistente virtual de IA para trámites y formalización en Perú",
+  "description": "Sistema de IA para trámites gubernamentales de Perú",
   "private": true,
   "workspaces": [
-    "apps/*",
+    "apps/frontend",
     "packages/*"
   ],
   "scripts": {
-    "dev": "turbo run dev",
     "build": "turbo run build",
+    "dev": "concurrently \"npm run backend:dev\" \"turbo run dev\"",
+    "frontend:dev": "turbo run dev",
+    "backend:dev": "cd apps/backend && python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000",
+    "backend:install": "cd apps/backend && poetry install",
+    "backend:shell": "cd apps/backend && poetry shell",
     "lint": "turbo run lint",
     "clean": "turbo run clean",
-    "type-check": "turbo run type-check",
+    "test": "turbo run test",
     "docker:up": "docker-compose up -d",
     "docker:down": "docker-compose down",
-    "db:migrate": "cd apps/backend && npm run db:migrate",
-    "db:seed": "cd apps/backend && npm run db:seed"
+    "db:setup": "npm run docker:up && sleep 5 && npm run backend:migrate",
+    "backend:migrate": "cd apps/backend && poetry run alembic upgrade head",
+    "backend:migration": "cd apps/backend && poetry run alembic revision --autogenerate -m",
+    "setup": "npm install && npm run backend:install && npm run docker:up",
+    "scraper:install": "cd packages/scraper && pip install -r requirements.txt",
+    "scraper:test": "cd packages/scraper && python test_scraper.py",
+    "scraper:run": "cd packages/scraper && python scraper_cli.py scrape",
+    "scraper:validate": "cd packages/scraper && python scraper_cli.py validate",
+    "scraper:search": "cd packages/scraper && python scraper_cli.py search",
+    "scraper:stats": "cd packages/scraper && python scraper_cli.py stats",
+    "scraper:doctor": "cd packages/scraper && python scraper_cli.py doctor",
+    "scraper:full": "npm run scraper:install && npm run scraper:test && npm run scraper:run"
   },
   "devDependencies": {
-    "turbo": "^1.10.0",
-    "@types/node": "^20.0.0",
-    "typescript": "^5.0.0"
+    "turbo": "^1.10.16",
+    "typescript": "^5.2.2",
+    "@types/node": "^20.8.0",
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
   },
   "engines": {
     "node": ">=18.0.0",
-    "npm": ">=9.0.0"
+    "npm": ">=8.0.0",
+    "python": ">=3.11.0"
   }
 }
